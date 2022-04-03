@@ -1,0 +1,430 @@
+
+<%- include("../partials/header")%>
+<%- include("../partials/navbar")%>
+
+<style>
+
+    body{
+        background-image: url(https://helbiz.com/_nuxt/img/helbiz-analytics-cover.e8d1c0b.jpg);
+        background-size: cover;
+      
+        /* background-color: white; */
+    }
+    @import "http://fonts.googleapis.com/css?family=Droid+Serif";  /* This Line is to import Google font style */
+.content{
+width:1400px;
+
+}
+.main{
+display: flex;
+align-items: center;
+float:left;
+width:850px;
+
+}
+#progressbar{
+margin:0;
+padding:0;
+font-size:18px
+}
+#active1{
+color: greenyellow
+}
+fieldset{
+display:none;
+width:350px;
+padding:20px;
+margin-top:50px;
+margin-left:85px;
+border-radius:5px;
+box-shadow:3px 3px 25px 1px gray
+}
+#first{
+display:block;
+width:350px;
+padding:20px;
+margin-top:50px;
+border-radius:5px;
+margin-left:85px;
+box-shadow:3px 3px 25px 1px gray
+}
+input[type=text],input[type=password],select{
+width:100%;
+margin:10px 0;
+height:40px;
+padding:5px;
+border:3px solid #ecb0dc;
+border-radius:4px
+}
+textarea{
+width:100%;
+margin:10px 0;
+height:50px;
+padding:5px;
+border:3px solid #ecb0dc;
+border-radius:4px
+}
+input[type=submit],input[type=button]{
+width:120px;
+margin:15px 25px;
+padding:5px;
+height:40px;
+background-color:#a0522d;
+border:none;
+border-radius:4px;
+color:#fff;
+font-family:'Droid Serif',serif
+}
+h2,p{
+text-align:center;
+font-family:'Droid Serif',serif
+}
+li{
+margin-right:52px;
+display:inline;
+color:#c1c5cc;
+font-family:'Droid Serif',serif
+}
+    /* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+body{
+  height: 100vh;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  padding: 10px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.container{
+  max-width: 700px;
+  width: 100%;
+  background-color: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container .title{
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.content form .user-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box{
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details{
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input{
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid{
+  border-color: #9b59b6;
+}
+ form .gender-details .gender-title{
+  font-size: 20px;
+  font-weight: 500;
+ }
+ form .category{
+   display: flex;
+   width: 80%;
+   margin: 14px 0 ;
+   justify-content: space-between;
+ }
+ form .category label{
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+ }
+ form .category label .dot{
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+ #dot-1:checked ~ .category label .one,
+ #dot-2:checked ~ .category label .two,
+ #dot-3:checked ~ .category label .three{
+   background: #9b59b6;
+   border-color: #d9d9d9;
+ }
+ form input[type="radio"]{
+   display: none;
+ }
+ form .button{
+   height: 45px;
+   margin: 35px 0
+ }
+ form .button input{
+   height: 100%;
+   width: 100%;
+   border-radius: 5px;
+   border: none;
+   color: #fff;
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 1px;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   background: linear-gradient(135deg, #71b7e6, #9b59b6);
+ }
+ form .button input:hover{
+  /* transform: scale(0.99); */
+
+
+
+
+</style>
+
+<div style="display: flex; justify-content: center;">
+<main class="container" style="margin-top: 5rem;">
+    
+    <%- include("../partials/flash")%>
+
+   
+     <!-- <section id="heading"> 
+
+      <h5 >Uber Ambulance Services </h5>
+
+    </section> -->
+    <!-- <div style="display: flex; align-content: flex-start;">
+      <div class="container">
+        <div class="title">Registration</div>
+        <div class="content">
+          <form action="#">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Full Name</span>
+                <input type="text" placeholder="Enter your name" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Username</span>
+                <input type="text" placeholder="Enter your username" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input type="text" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Phone Number</span>
+                <input type="text" placeholder="Enter your number" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Password</span>
+                <input type="text" placeholder="Enter your password" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Confirm Password</span>
+                <input type="text" placeholder="Confirm your password" required>
+              </div>
+            </div>
+            <div class="gender-details">
+              <input type="radio" name="gender" id="dot-1">
+              <input type="radio" name="gender" id="dot-2">
+              <input type="radio" name="gender" id="dot-3">
+              <span class="gender-title">Gender</span>
+              <div class="category">
+                <label for="dot-1">
+                <span class="dot one"></span>
+                <span class="gender">Male</span>
+              </label>
+              <label for="dot-2">
+                <span class="dot two"></span>
+                <span class="gender">Female</span>
+              </label>
+              <label for="dot-3">
+                <span class="dot three"></span>
+                <span class="gender">Prefer not to say</span>
+                </label>
+              </div>
+            </div>
+            <div class="button">
+              <input type="submit" value="Register">
+            </div>
+          </form>
+        </div>
+      </div>
+     
+    </div> -->
+    <div style="display: flex; justify-content:center;">
+      <div style="display: flex; justify-content: center;">
+     
+      <div class="content"  style=" color: white;display: flex; justify-content: center;">
+   
+        <!-- Multistep Form -->
+        <div class="main" style="display: flex; justify-content: center;">
+        <form action="#" class="regform" method="get">
+        <!-- Progressbar -->
+        <ul id="progressbar">
+        <li id="active1" >Personal Details</li>
+        <li id="active2" >Ambulance Details</li>
+        <li id="active3" >Location Details</li>
+        </ul>
+        <!-- Fieldsets -->
+        <fieldset id="first">
+       
+          
+  
+        <h2 class="title" style="color: white">Personal Details</h2>
+        <p class="subtitle">Step 1</p>
+        <input class="text_field" name="fname" placeholder="Name" type="text">
+  
+        <label>Gender</label>
+        <input name="gender" type="radio" value="Male" style="color: white">Male
+        <input name="gender" type="radio" value="Female" style="color: white">Female
+        <input class="text_field" name="email" placeholder="Email" type="text" value="">
+        <input class="text_field" name="cont" placeholder="Contact" type="text">
+    
+  
+        <input class="text_field" name="pass" placeholder="Password" type="password" value="">
+        <input id="next_btn1" onclick="next_step1()" type="button" value="Next">
+        </fieldset>
+        <fieldset id="second">
+        <h2 class="title" style="color: white">Ambulance Details</h2>
+        <p class="subtitle" style="color: white">Step 2</p>
+        <select class="options">
+        <option >--Select Ambulance Type--</option>
+        <option >BCS</option>
+        <option >ACS</option>
+        <option >ECS</option>
+    
+        </select>
+        <input class="text_field" name="marks" placeholder="Ambulance Vehicle Name" type="text" value="">
+        <input class="text_field" name="pyear" placeholder="Ambulance Registered Number" type="text" value="">
+        <input class="text_field" name="univ" placeholder="Model Number" type="text">
+        <div style="display: flex;justify-content: center;">
+          <input id="pre_btn1" onclick="prev_step1()" type="button" value="Previous">
+          <input id="next_btn2" name="next" onclick="next_step2()" type="button" value="Next">
+        </div>
+        
+        </fieldset>
+        <fieldset id="third">
+        <h2 class="title" style="color: white">Location Details</h2>
+        <p class="subtitle" style="color: white">Step 3</p>
+        <input class="text_field" name="fname" placeholder="Pin current location" type="text">
+        
+        <textarea  name="address" placeholder="Enter your location"></textarea>
+        <input class="text_field" name="lname" placeholder="Enter PIN Code" type="text">
+        <div style="display: flex; justify-content: center;">
+          <input id="pre_btn2" onclick="prev_step2()" type="button" value="Previous">
+          <input class="submit_btn" onclick="validation(event)" type="submit" value="Submit">
+        </div>
+  
+        </fieldset>
+        </form>
+        </div>
+       
+        </div>
+    </div>
+    </div>
+   
+
+
+   
+
+
+
+
+</main>
+</div>
+
+
+
+<script>
+  /*------------Validation Function-----------------*/
+var count = 0; // To count blank fields.
+function validation(event) {
+var radio_check = document.getElementsByName('gender'); // Fetching radio button by name.
+var input_field = document.getElementsByClassName('text_field'); // Fetching all inputs with same class name text_field and an html tag textarea.
+var text_area = document.getElementsByTagName('textarea');
+// Validating radio button.
+if (radio_check[0].checked == false && radio_check[1].checked == false) {
+var y = 0;
+} else {
+var y = 1;
+}
+// For loop to count blank inputs.
+for (var i = input_field.length; i > count; i--) {
+if (input_field[i - 1].value == '' || text_area.value == '') {
+count = count + 1;
+} else {
+count = 0;
+}
+}
+if (count != 0 || y == 0) {
+alert("*All Fields are mandatory*"); // Notifying validation
+event.preventDefault();
+} else {
+   alert("Registration Successful"); 
+   window.open('/');
+   return true;
+}
+}
+/*---------------------------------------------------------*/
+// Function that executes on click of first next button.
+function next_step1() {
+document.getElementById("first").style.display = "none";
+document.getElementById("second").style.display = "block";
+document.getElementById("active2").style.color = "greenyellow";
+}
+// Function that executes on click of first previous button.
+function prev_step1() {
+document.getElementById("first").style.display = "block";
+document.getElementById("second").style.display = "none";
+document.getElementById("active1").style.color = "greenyellow";
+document.getElementById("active2").style.color = "gray";
+}
+// Function that executes on click of second next button.
+function next_step2() {
+document.getElementById("second").style.display = "none";
+document.getElementById("third").style.display = "block";
+document.getElementById("active3").style.color = "greenyellow";
+}
+// Function that executes on click of second previous button.
+function prev_step2() {
+document.getElementById("third").style.display = "none";
+document.getElementById("second").style.display = "block";
+document.getElementById("active2").style.color = "greenyellow";
+document.getElementById("active3").style.color = "gray";
+}
+
+</script>
+
+
+    
+<!-- <%- include("../partials/footer")%> -->
