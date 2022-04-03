@@ -7,7 +7,7 @@
 <h2>About this Project: </h2>
 
 This is a web application to onboard new private/hospital affiliated drivers to Uber.  <br>
-It allows new drivers to add their ambulances to the Uber database from which information will be fetched to allocate drivers to the nearest ambulance seeker (ETA). <br>
+It allows new drivers to add their ambulances to the Uber database from which information will be fetched to allocate drivers to the nearest ambulance seeker (ETA). This is a subproject for Uber HackTag 2.0<br>
 Databases will be required to address the immediate as well as long-term needs of ambulance applicants. 
 It adopts a hybrid cloud model, with physical data assigned to areas with geographical proximity to an event of trauma.
 
